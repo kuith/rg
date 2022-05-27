@@ -3,16 +3,28 @@ import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import Footer from "./components/footer/Footer";
 
-import { getDataFooter } from './data';
-import { getVideoCategories } from './data';
-import { getVideos } from './data';
+import {
+  getDataFooter,
+  getVideoCategories,
+  getVideos,
+  getChanelLogo,
+  getFlippedButton,
+  getAboutButton,
+  getHeaderGrades
+} from "./data";
+
 
 function App() {
   return (
     <>
-      <Header />
-      <Main videoCategories={getVideoCategories} videosAlbum={getVideos}/>
-      <Footer data={getDataFooter}/>
+      <Header
+        logo={getChanelLogo}
+        flipped={getFlippedButton}
+        about={getAboutButton}
+        drops={getHeaderGrades}
+      />
+      <Main videoCategories={getVideoCategories} videosAlbum={getVideos} />
+      <Footer data={getDataFooter} />
     </>
   );
 }

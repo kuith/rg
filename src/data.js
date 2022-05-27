@@ -96,10 +96,93 @@ const data = {
       url: "#",
     },
   ],
+  chanelLogo: {
+    url: "#",
+  },
+  flippedButton: {
+    url: "#",
+    text: "FLIPPED LEARNING",
+  },
+  aboutButton: {
+    url: "#",
+    text: "ABOUT",
+  },
+  headerGrades: {
+    cfr: {
+      title: "CFR",
+      grades: [
+        {
+          grade: "A1",
+          url: "#",
+        },
+        {
+          grade: "A1+",
+          url: "#",
+        },
+        {
+          grade: "A2",
+          url: "#",
+        },
+        {
+          grade: "A2+",
+          url: "#",
+        },
+        {
+          grade: "B1",
+          url: "#",
+        },
+        {
+          grade: "B1+",
+          url: "#",
+        },
+        {
+          grade: "B2",
+          url: "#",
+        },
+        {
+          grade: "B2+",
+          url: "#",
+        },
+      ],
+      url: "#",
+    },
+    cambridge: {
+      title: "CAMBRIDGE",
+      grades: [
+        {
+          grade: "Starters",
+          url: "#",
+        },
+        {
+          grade: "Movers",
+          url: "#",
+        },
+        {
+          grade: "Fliers",
+          url: "#",
+        },
+        {
+          grade: "Key",
+          url: "#",
+        },
+        {
+          grade: "Preliminary",
+          url: "#",
+        },
+        {
+          grade: "First",
+          url: "#",
+        },
+      ]
+    },
+  },
 };
-
-
 
 export const getDataFooter = data.footer;
 export const getVideoCategories = data.videoCategories;
 export const getVideos = data.videos;
+export const getChanelLogo = data.chanelLogo;
+export const getFlippedButton = data.flippedButton;
+export const getAboutButton = data.aboutButton;
+export const getCfr = data.cfr;
+export const getHeaderGrades = data.headerGrades;
