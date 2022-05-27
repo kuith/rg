@@ -8,7 +8,7 @@ function Main({ videoCategories, videosAlbum }) {
     <main>
       <Carousel />
       <ButtonsCategoriesContainer categories={videoCategories} />
-      <AlbumContainer videos={videosAlbum}/>
+      <AlbumContainer listVideos={videosAlbum}/>
     </main>
   );
 }

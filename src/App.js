@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import "./App.css";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
@@ -10,11 +12,13 @@ import {
   getChanelLogo,
   getFlippedButton,
   getAboutButton,
-  getHeaderGrades
+  getHeaderGrades,
 } from "./data";
 
 
 function App() {
+  const [videos, setVideos] = useState(getVideos);
+
   return (
     <>
       <Header
@@ -23,7 +27,7 @@ function App() {
         about={getAboutButton}
         drops={getHeaderGrades}
       />
-      <Main videoCategories={getVideoCategories} videosAlbum={getVideos} />
+      <Main videoCategories={getVideoCategories} videosAlbum={videos} />
       <Footer data={getDataFooter} />
     </>
   );

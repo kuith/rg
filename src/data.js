@@ -130,7 +130,9 @@ const data = {
     },
   ],
   chanelLogo: {
-    url: "/assets/videos/",
+    url: "#",
+    urlLogo: "/",
+    logo: "grammar-channel-logo.png",
   },
   flippedButton: {
     url: "/assets/videos/",
@@ -143,68 +145,69 @@ const data = {
   headerGrades: {
     cfr: {
       title: "CFR",
+      url: "#",
       grades: [
         {
           grade: "A1",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "A1+",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "A2",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "A2+",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "B1",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "B1+",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "B2",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "B2+",
-          url: "/assets/videos/",
+          url: "#",
         },
       ],
-      url: "/assets/videos/",
     },
     cambridge: {
       title: "CAMBRIDGE",
+      url: "#",
       grades: [
         {
           grade: "Starters",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "Movers",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "Fliers",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "Key",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "Preliminary",
-          url: "/assets/videos/",
+          url: "#",
         },
         {
           grade: "First",
-          url: "/assets/videos/",
+          url: "#",
         },
       ],
     },

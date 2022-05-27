@@ -1,9 +1,9 @@
 import AlbumItem from './AlbumItem';
 
-function AlbumContainer({ videos }) {
-  const videosAlbum = videos.map(item => (
-    <AlbumItem video={item} key={item.title}/>
-  ))
+function AlbumContainer({ listVideos }) {
+  const videosAlbum = listVideos.map((item) => (
+    <AlbumItem video={item} key={item.title} />
+  ));
   return (
     <div className="album py-5 bg-light">
       <div className="container">
