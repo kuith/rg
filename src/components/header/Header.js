@@ -3,7 +3,8 @@ import HeaderButton from './HeaderButton';
 import DropGrades from './DropGrades';
 import HeaderForm from './HeaderForm';
 
-function Header({ logo, flipped, about, drops }) {
+function Header({ logo, flipped, about, drops, onClick }) {
+
   return (
     <>
       <header>
@@ -46,8 +47,8 @@ function Header({ logo, flipped, about, drops }) {
               </div>
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end me-4 flex-grow-1">
-                  <DropGrades drop={drops.cfr} />
-                  <DropGrades drop={drops.cambridge} />
+                  <DropGrades drop={drops.cfr} onClick={onClick} />
+                  <DropGrades drop={drops.cambridge} onClick={onClick} />
 
                   <li className="nav-item">
                     <HeaderButton dataButton={flipped} />

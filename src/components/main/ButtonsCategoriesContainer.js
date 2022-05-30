@@ -1,9 +1,13 @@
 import ButtonCategory from "./ButtonCategory";
 import ButtonAllVideos from "./ButtonAllVideos";
 
-function ButtonsCategoriesContainer({ categories }) {
+function ButtonsCategoriesContainer({ categories, onClick }) {
   const buttons = categories.map((item) => (
-    <ButtonCategory category={item.category} key={item.category} />
+    <ButtonCategory
+      category={item.category}
+      onClick={onClick}
+      key={item.category}
+    />
   ));
 
   return (

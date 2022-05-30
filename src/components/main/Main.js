@@ -2,13 +2,16 @@ import ButtonsCategoriesContainer from "./ButtonsCategoriesContainer";
 import AlbumContainer from './AlbumContainer';
 import Carousel from './Carousel';
 
-function Main({ videoCategories, videosAlbum }) {
-
+function Main({ videoCategories, videosAlbum, onClick }) {
+  
   return (
     <main>
       <Carousel />
-      <ButtonsCategoriesContainer categories={videoCategories} />
-      <AlbumContainer listVideos={videosAlbum}/>
+      <ButtonsCategoriesContainer
+        categories={videoCategories}
+        onClick={onClick}
+      />
+      <AlbumContainer listVideos={videosAlbum} />
     </main>
   );
 }

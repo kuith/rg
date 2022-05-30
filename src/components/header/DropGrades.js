@@ -1,9 +1,9 @@
 import LiGrade from "./LiGrade";
 
-function DropGrades({ drop }) {
+function DropGrades({ drop, onClick }) {
   
-  const liGrades = drop.grades.map(item => (
-    <LiGrade data={item} key={ item.grade}/>
+  const liGrades = drop.grades.map((item) => (
+    <LiGrade data={item} key={item.grade} onClick={onClick}/>
   ));
   
   return (
