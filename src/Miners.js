@@ -17,8 +17,18 @@ const videosByGrade = (grade) => {
   return videosResult;
 };
 
+const videosByCategory = (category) => {
+  const videosTotal = getVideos;
+
+  const videosResult = videosTotal[category].filter(
+    (cat) => (cat.category === category)
+  );
+  return videosResult;
+};
+
 export {
-  videosByGrade
+  videosByGrade,
+  videosByCategory
 }
 
 /* {
@@ -29,7 +39,7 @@ export {
       video: "video1.mp4",
       cfrGrade: "A1",
       cambridgeGrade: "Starters",
-      category: [],
+      category: ["adjetives", "Gerund", "Present Perfect"],
     }, 
     const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 

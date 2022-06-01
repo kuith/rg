@@ -15,7 +15,7 @@ import {
   getHeaderGrades,
 } from "./data";
 
-import { videosByGrade } from './Miners';
+import { videosByGrade, videosByCategory } from './Miners';
 
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
 
   useEffect(() => {
     console.log("la categoria que pasao al hook", selectedCategory);
+    //setVideos(videosByCategory(setSelectedCategory));
   }, [selectedCategory]);
 
   useEffect(() => {
