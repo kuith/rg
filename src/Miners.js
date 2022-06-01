@@ -17,13 +17,20 @@ const videosByGrade = (grade) => {
   return videosResult;
 };
 
-const videosByCategory = (category) => {
+const cate = (video) => {
+  return video.category;
+}
+
+const videosByCategory = (cat) => {
   const videosTotal = getVideos;
 
-  const videosResult = videosTotal[category].filter(
-    (cat) => (cat.category === category)
-  );
-  return videosResult;
+  if (cat === "All videos") {
+    return videosTotal;
+  }
+  
+  /* const videos = videosTotal.map(vid => (
+    
+  )) */
 };
 
 export {

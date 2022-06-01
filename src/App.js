@@ -19,7 +19,10 @@ import { videosByGrade, videosByCategory } from './Miners';
 
 
 function App() {
-  const [videos, setVideos] = useState(getVideos);
+  
+  
+  const [inicialVideos, setInicialVideos] = useState(getVideos);
+  const [videos, setVideos] = useState(inicialVideos);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedGrade, setSelectedGrade] = useState("");
   
@@ -27,23 +30,26 @@ function App() {
     setSelectedGrade(grade);
   };
   const onClickVideoCategory = (cat) => {
-      setSelectedCategory(cat);
+    setSelectedCategory(cat);
+     //console.log("categoria:", cat);
   };
- 
+
   useEffect(() => {
-    console.log("Grade seleccionado", selectedGrade);
+    //console.log("Grade seleccionado", selectedGrade);
     setVideos(videosByGrade(selectedGrade));
   }, [selectedGrade]);
 
   useEffect(() => {
-    console.log("la categoria que pasao al hook", selectedCategory);
-    //setVideos(videosByCategory(setSelectedCategory));
+    //console.log("Grade seleccionado", selectedGrade);
+    setVideos(videosByCategory(selectedCategory));
   }, [selectedCategory]);
 
   useEffect(() => {
-    setVideos(videos);
-  }, []);
-
+    //console.log("la categoria que pasao al hook", selectedCategory);
+    setVideos(inicialVideos);
+    //console.log("Le mando estos videos:", inicialVideos);
+  }, [inicialVideos]);
+  
   return (
     <>
       <Header
@@ -51,7 +57,7 @@ function App() {
         flipped={getFlippedButton}
         about={getAboutButton}
         drops={getHeaderGrades}
-        onClick = {onClickGrade}
+        onClick={onClickGrade}
       />
       <Main
         videoCategories={getVideoCategories}

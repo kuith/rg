@@ -14,7 +14,7 @@ function ButtonsCategoriesContainer({ categories, onClick }) {
     <div className="tagcloud mb-5">
       <div className="container text-center">
         <h2 className="h4 mb-4">Filter by category:</h2>
-        <ButtonAllVideos />
+        <ButtonAllVideos onclick={onClick} />
         {buttons}
       </div>
     </div>
