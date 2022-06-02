@@ -17,20 +17,18 @@ const videosByGrade = (grade) => {
   return videosResult;
 };
 
-const cate = (video) => {
-  return video.category;
-}
-
 const videosByCategory = (cat) => {
   const videosTotal = getVideos;
 
   if (cat === "All videos") {
     return videosTotal;
   }
+
+  const videosPorCat = videosTotal.filter(
+    (video) => (video.category.includes(cat))
+  )
+  return videosPorCat
   
-  /* const videos = videosTotal.map(vid => (
-    
-  )) */
 };
 
 export {
@@ -48,7 +46,4 @@ export {
       cambridgeGrade: "Starters",
       category: ["adjetives", "Gerund", "Present Perfect"],
     }, 
-    const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-
-    const result = words.filter(word => word.length > 6);
     */
