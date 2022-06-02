@@ -25,6 +25,7 @@ function App() {
   const [videos, setVideos] = useState(inicialVideos);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedGrade, setSelectedGrade] = useState("");
+  const [keyWordSearch, setKeyWordSearch] = [];
   
   const onClickGrade = (grade) => {
     setSelectedGrade(grade);
@@ -33,6 +34,10 @@ function App() {
     setSelectedCategory(cat);
      //console.log("categoria:", cat);
   };
+  const HandleChange = e => {
+    setKeyWordSearch(e.target.value);
+    console.log(e.target.value);
+  }
 
   useEffect(() => {
     //console.log("Grade seleccionado", selectedGrade);
@@ -49,7 +54,8 @@ function App() {
     setVideos(inicialVideos);
     //console.log("Le mando estos videos:", inicialVideos);
   }, [inicialVideos]);
-  
+
+    
   return (
     <>
       <Header
@@ -58,6 +64,7 @@ function App() {
         about={getAboutButton}
         drops={getHeaderGrades}
         onClick={onClickGrade}
+        searchKeyWords={HandleChange}
       />
       <Main
         videoCategories={getVideoCategories}

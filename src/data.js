@@ -34,6 +34,20 @@ const data = {
     { category: "Vocab/Spelling" },
     { category: "Wishes" },
   ],
+  keyWords: [
+    "uno",
+    "dos",
+    "tres",
+    "cuatro",
+    "cinco",
+    "seis",
+    "siete",
+    "ocho",
+    "nueve",
+    "diez",
+    "once",
+    "doce",
+  ],
   videos: [
     {
       title: "A1 - Starters",
@@ -43,8 +57,9 @@ const data = {
       video: "video1.mp4",
       cfrGrade: "A1",
       cambridgeGrade: "Starters",
-      category: ["Adjectives", "Possessives", "Wishes"],
-      id:0
+      categories: ["Adjectives", "Possessives", "Wishes"],
+      keyWords: ["uno", "dos", "tres", "cuatro", "cinco"],
+      id: 0,
     },
     {
       title: "A1+ - Movers",
@@ -54,8 +69,9 @@ const data = {
       video: "video2.mp4",
       cfrGrade: "A1+",
       cambridgeGrade: "Movers",
-      category: ["Adjectives", "Possessives", "Wishes"],
-      id:1
+      categories: ["Adjectives", "Possessives", "Wishes"],
+      keyWords: ["uno", "dos", "tres", "seis", "siete"],
+      id: 1,
     },
     {
       title: "A2 - Fliers",
@@ -65,8 +81,9 @@ const data = {
       video: "video3.mp4",
       cfrGrade: "A2",
       cambridgeGrade: "Fliers",
-      category: ["Adjectives", "Possessives", "Present Perfect"],
-      id:2
+      categories: ["Adjectives", "Possessives", "Present Perfect"],
+      keyWords: ["uno", "tres", "seis", "siete", "ocho"],
+      id: 2,
     },
     {
       title: "A1 - Movers",
@@ -75,8 +92,9 @@ const data = {
       url: "/assets/videos/",
       cfrGrade: "A1",
       cambridgeGrade: "Movers",
-      category: ["Adjectives", "Possessives", "Present Perfect"],
-      id:3
+      categories: ["Adjectives", "Possessives", "Present Perfect"],
+      keyWords: ["uno", "tres", "seis", "siete", "ocho"],
+      id: 3,
     },
     {
       title: "A1+ - Fliers",
@@ -85,18 +103,20 @@ const data = {
       url: "/assets/videos/",
       cfrGrade: "A1+",
       cambridgeGrade: "Fliers",
-      category: ["Adjectives", "Possessives", "Present Perfect"],
-      id:4
+      categories: ["Adjectives", "Possessives", "Present Perfect"],
+      keyWords: ["siete", "ocho", "nueve", "diez", "once"],
+      id: 4,
     },
     {
       title: "A1+ - Key",
-      videoText: "VideoText6" ,
+      videoText: "VideoText6",
       videoDescription: "Adjectives, Gerund, Present Perfect",
       url: "/assets/videos/",
       cfrGrade: "A1+",
       cambridgeGrade: "Key",
-      category: ["Adjectives", "Gerund", "Present Perfect"],
-      id:5
+      categories: ["Adjectives", "Gerund", "Present Perfect"],
+      keyWords: ["siete", "ocho", "nueve", "diez", "once"],
+      id: 5,
     },
     {
       title: "B1 - First",
@@ -105,8 +125,9 @@ const data = {
       url: "/assets/videos/",
       cfrGrade: "B1",
       cambridgeGrade: "First",
-      category: ["Adjectives", "Gerund", "Present Perfect"],
-      id:6
+      categories: ["Adjectives", "Gerund", "Present Perfect"],
+      keyWords: ["uno", "ocho", "tres", "diez", "once"],
+      id: 6,
     },
     {
       title: "A1 - Fliers",
@@ -115,8 +136,9 @@ const data = {
       url: "/assets/videos/",
       cfrGrade: "A1",
       cambridgeGrade: "Fliers",
-      category: [],
-      id:7
+      categories: [],
+      keyWords: ["dos", "tres", "cuatro", "diez", "once"],
+      id: 7,
     },
     {
       title: "B1 - Preliminary",
@@ -125,8 +147,9 @@ const data = {
       url: "/assets/videos/",
       cfrGrade: "B1",
       cambridgeGrade: "Preliminary",
-      category: [],
-      id:8
+      categories: [],
+      keyWords: ["nueve", "diez", "once", "doce"],
+      id: 8,
     },
     {
       title: "B1 - Preliminary",
@@ -135,8 +158,9 @@ const data = {
       url: "/assets/videos/",
       cfrGrade: "B1",
       cambridgeGrade: "Preliminary",
-      category: [],
-      id:9
+      categories: [],
+      keyWords: ["nueve", "diez", "once", "doce"],
+      id: 9,
     },
   ],
   chanelLogo: {

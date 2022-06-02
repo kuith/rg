@@ -24,9 +24,9 @@ const videosByCategory = (cat) => {
     return videosTotal;
   }
 
-  const videosPorCat = videosTotal.filter(
-    (video) => (video.category.includes(cat))
-  )
+  const videosPorCat = videosTotal.filter((video) =>
+    video.categories.includes(cat)
+  );
   return videosPorCat
   
 };
