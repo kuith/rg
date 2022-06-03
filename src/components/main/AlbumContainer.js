@@ -1,6 +1,7 @@
 import AlbumItem from './AlbumItem';
 
 function AlbumContainer({ listVideos }) {
+  
   const videosAlbum = listVideos.map((item) => (
     <AlbumItem video={item} key={item.id} />
   ));

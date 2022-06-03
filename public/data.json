@@ -1,0 +1,250 @@
+{
+  "footer": {
+    "texto": "© Sanoma Educación S.L.U / Richmond",
+    "contacto": "Contacto",
+    "email": "richmond@richmondelt.es",
+    "condicionesdeuso": "Condiciones de uso",
+    "politicadeprivacidad": "Política de privacidad"
+  },
+  "videoCategories": [
+    { "category": "Adjectives" },
+    { "category": "Adverbs" },
+    { "category": "Clauses" },
+    { "category": "Conditionals" },
+    { "category": "Future" },
+    { "category": "Gerund" },
+    { "category": "Imperatives" },
+    { "category": "Intensifiers" },
+    { "category": "Modals" },
+    { "category": "Nouns" },
+    { "category": "Passive" },
+    { "category": "Passives" },
+    { "category": "Past Continuous" },
+    { "category": "Past Perfect" },
+    { "category": "Past Simple" },
+    { "category": "Possessives" },
+    { "category": "Prepositions" },
+    { "category": "Present Continuous" },
+    { "category": "Present Perfect" },
+    { "category": "Present Simple" },
+    { "category": "Pronouns" },
+    { "category": "Quantifiers" },
+    { "category": "Tag questions" },
+    { "category": "Verb patterns" },
+    { "category": "Vocab/Spelling" },
+    { "category": "Wishes" }
+  ],
+  "keyWords": [
+    "uno",
+    "dos",
+    "tres",
+    "cuatro",
+    "cinco",
+    "seis",
+    "siete",
+    "ocho",
+    "nueve",
+    "diez",
+    "once",
+    "doce"
+  ],
+  "videos": [
+    {
+      "title": "A1 - Starters",
+      "videoText": "VideoText1",
+      "videoDescription": "Adjectives, Possessives, Wishes",
+      "url": "/assets/videos/",
+      "video": "video1.mp4",
+      "cfrGrade": "A1",
+      "cambridgeGrade": "Starters",
+      "categories": ["Adjectives", "Possessives", "Wishes"],
+      "keyWords": ["uno", "dos", "tres", "cuatro", "cinco"],
+      "id": 0
+    },
+    {
+      "title": "A1+ - Movers",
+      "videoText": "adVideoText2",
+      "videoDescription": "Adjectives, Possessives, Wishes",
+      "url": "/assets/videos/",
+      "video": "video2.mp4",
+      "cfrGrade": "A1+",
+      "cambridgeGrade": "Movers",
+      "categories": ["Adjectives", "Possessives", "Wishes"],
+      "keyWords": ["uno", "dos", "tres", "seis", "siete"],
+     "id": 1
+    },
+    {
+      "title": "A2 - Fliers",
+      "videoText": "VideoText3",
+      "videoDescription": "Adjectives, Possessives, Present Perfect",
+      "url": "/assets/videos/",
+      "video": "video3.mp4",
+      "cfrGrade": "A2",
+      "cambridgeGrade": "Fliers",
+      "categories": ["Adjectives", "Possessives", "Present Perfect"],
+      "keyWords": ["uno", "tres", "seis", "siete", "ocho"],
+     "id": 2
+    },
+    {
+      "title": "A1 - Movers",
+      "videoText": "VideoText4",
+      "videoDescription": "Adjectives, Possessives, Present Perfect",
+      "url": "/assets/videos/",
+      "cfrGrade": "A1",
+      "cambridgeGrade": "Movers",
+      "categories": ["Adjectives", "Possessives", "Present Perfect"],
+      "keyWords": ["uno", "tres", "seis", "siete", "ocho"],
+     "id": 3
+    },
+    {
+      "title": "A1+ - Fliers",
+      "videoText": "VideoText5",
+      "videoDescription": "Adjectives, Possessives, Present Perfect",
+      "url": "/assets/videos/",
+      "cfrGrade": "A1+",
+      "cambridgeGrade": "Fliers",
+      "categories": ["Adjectives", "Possessives", "Present Perfect"],
+      "keyWords": ["siete", "ocho", "nueve", "diez", "once"],
+     "id": 4
+    },
+    {
+      "title": "A1+ - Key",
+      "videoText": "VideoText6",
+      "videoDescription": "Adjectives, Gerund, Present Perfect",
+      "url": "/assets/videos/",
+      "cfrGrade": "A1+",
+      "cambridgeGrade": "Key",
+      "categories": ["Adjectives", "Gerund", "Present Perfect"],
+      "keyWords": ["siete", "ocho", "nueve", "diez", "once"],
+     "id": 5
+    },
+    {
+      "title": "B1 - First",
+      "videoText": "aVideoText7",
+      "videoDescription": "Adjectives, Gerund, Present Perfect",
+      "url": "/assets/videos/",
+      "cfrGrade": "B1",
+      "cambridgeGrade": "First",
+      "categories": ["Adjectives", "Gerund", "Present Perfect"],
+      "keyWords": ["uno", "ocho", "tres", "diez", "once"],
+     "id": 6
+    },
+    {
+      "title": "A1 - Fliers",
+      "videoText": "VideoText 8",
+      "videoDescription": "Description 8",
+      "url": "/assets/videos/",
+      "cfrGrade": "A1",
+      "cambridgeGrade": "Fliers",
+      "categories": [],
+      "keyWords": ["dos", "tres", "cuatro", "diez", "once"],
+     "id": 7
+    },
+    {
+      "title": "B1 - Preliminary",
+      "videoText": "VideoText 9",
+      "videoDescription": "Description 9",
+      "url": "/assets/videos/",
+      "cfrGrade": "B1",
+      "cambridgeGrade": "Preliminary",
+      "categories": [],
+      "keyWords": ["nueve", "diez", "once", "doce"],
+     "id": 8
+    },
+    {
+      "title": "B1 - Preliminary",
+      "videoText": "VideoText 10",
+      "videoDescription": "Description 10",
+      "url": "/assets/videos/",
+      "cfrGrade": "B1",
+      "cambridgeGrade": "Preliminary",
+      "categories": [],
+      "keyWords": ["nueve", "diez", "once", "doce"],
+     "id": 9
+    }
+  ],
+  "chanelLogo": {
+    "url": "#",
+    "urlLogo": "/",
+    "logo": "grammar-channel-logo.png"
+  },
+  "flippedButton": {
+    "url": "/assets/videos/",
+    "text": "FLIPPED LEARNING"
+  },
+  "aboutButton": {
+    "url": "/assets/videos/",
+    "text": "ABOUT"
+  },
+  "headerGrades": {
+    "cfr": {
+      "title": "CFR",
+      "url": "#",
+      "grades": [
+        {
+          "grade": "A1",
+          "url": "#"
+        },
+        {
+          "grade": "A1+",
+          "url": "#"
+        },
+        {
+          "grade": "A2",
+          "url": "#"
+        },
+        {
+          "grade": "A2+",
+          "url": "#"
+        },
+        {
+          "grade": "B1",
+          "url": "#"
+        },
+        {
+          "grade": "B1+",
+          "url": "#"
+        },
+        {
+          "grade": "B2",
+          "url": "#"
+        },
+        {
+          "grade": "B2+",
+          "url": "#"
+        }
+      ]
+    },
+    "cambridge": {
+      "title": "CAMBRIDGE",
+      "url": "#",
+      "grades": [
+        {
+          "grade": "Starters",
+          "url": "#"
+        },
+        {
+          "grade": "Movers",
+          "url": "#"
+        },
+        {
+          "grade": "Fliers",
+          "url": "#"
+        },
+        {
+          "grade": "Key",
+          "url": "#"
+        },
+        {
+          "grade": "Preliminary",
+          "url": "#"
+        },
+        {
+          "grade": "First",
+          "url": "#"
+        }
+      ]
+    }
+  }
+}
+

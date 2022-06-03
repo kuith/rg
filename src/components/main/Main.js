@@ -12,10 +12,10 @@ function Main({
     <main>
       <Carousel />
       <ButtonsCategoriesContainer
-        categories={videoCategories}
+        categories={videoCategories || []}
         onClick={onClick}
        />
-      <AlbumContainer listVideos={videosAlbum} />
+      <AlbumContainer listVideos={videosAlbum || []} />
     </main>
   );
 }

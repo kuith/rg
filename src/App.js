@@ -5,73 +5,71 @@ import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import Footer from "./components/footer/Footer";
 
-import {
-  getDataFooter,
-  getVideoCategories,
-  getVideos,
-  getChanelLogo,
-  getFlippedButton,
-  getAboutButton,
-  getHeaderGrades,
-} from "./data";
+import { DataManager } from "./data-manager";
 
-import { videosByGrade, videosByCategory } from './Miners';
-
+import { Selectors } from "./Miners";
 
 function App() {
-  
-  
-  const [inicialVideos, setInicialVideos] = useState(getVideos);
-  const [videos, setVideos] = useState(inicialVideos);
+  const [data, setData] = useState();
+  const [videos, setVideos] = useState();
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedGrade, setSelectedGrade] = useState("");
-  const [keyWordSearch, setKeyWordSearch] = [];
-  
-  const onClickGrade = (grade) => {
-    setSelectedGrade(grade);
-  };
-  const onClickVideoCategory = (cat) => {
-    setSelectedCategory(cat);
-     //console.log("categoria:", cat);
-  };
-  const HandleChange = e => {
-    setKeyWordSearch(e.target.value);
-    console.log(e.target.value);
-  }
+  //const [keyWordSearch, setKeyWordSearch] = [];
 
   useEffect(() => {
-    //console.log("Grade seleccionado", selectedGrade);
-    setVideos(videosByGrade(selectedGrade));
+    const fetchData = async () => {
+      const initialData = await DataManager.loadData();
+      setData(initialData);
+    };
+    fetchData();
+  }, [data]);
+
+  useEffect(() => {
+    if (data) {
+      const selectedVideos = Selectors.videosByGrade(data, selectedGrade);
+      setVideos(selectedVideos);
+    }
   }, [selectedGrade]);
 
   useEffect(() => {
-    //console.log("Grade seleccionado", selectedGrade);
-    setVideos(videosByCategory(selectedCategory));
+    if (data) {
+      setVideos(Selectors.videosByCategory(data, selectedCategory));
+    }
   }, [selectedCategory]);
 
-  useEffect(() => {
-    //console.log("la categoria que pasao al hook", selectedCategory);
-    setVideos(inicialVideos);
-    //console.log("Le mando estos videos:", inicialVideos);
-  }, [inicialVideos]);
+  if (data === undefined) {
+    return <h3>Loading</h3>;
+  }
 
-    
+  const onClickGrade = (grade) => {
+    setSelectedGrade(grade);
+    console.log("setSelectedGrade", grade);
+  };
+  const onClickVideoCategory = (cat) => {
+    setSelectedCategory(cat);
+    //console.log("categoria:", cat);
+  };
+  /* const HandleChange = (e) => {
+    setKeyWordSearch(e.target.value);
+    console.log(e.target.value);
+  }; */
+
   return (
     <>
       <Header
-        logo={getChanelLogo}
-        flipped={getFlippedButton}
-        about={getAboutButton}
-        drops={getHeaderGrades}
+        logo={Selectors.getChanelLogo(data)}
+        flipped={Selectors.getFlippedButton(data)}
+        about={Selectors.getAboutButton(data)}
+        drops={Selectors.getHeaderGrades(data)}
         onClick={onClickGrade}
-        searchKeyWords={HandleChange}
+        //searchKeyWords={HandleChange}
       />
       <Main
-        videoCategories={getVideoCategories}
-        videosAlbum={videos}
+        videoCategories={Selectors.getVideoCategories(data)}
+        videosAlbum={videos || []}
         onClick={onClickVideoCategory}
       />
-      <Footer data={getDataFooter} />
+      <Footer data={Selectors.getDataFooter(data)} />
     </>
   );
 }
