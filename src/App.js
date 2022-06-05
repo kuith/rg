@@ -6,7 +6,6 @@ import Main from "./components/main/Main";
 import Footer from "./components/footer/Footer";
 
 import { DataManager } from "./data-manager";
-
 import { Selectors } from "./Miners";
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
   const [videos, setVideos] = useState();
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedGrade, setSelectedGrade] = useState("");
-  //const [keyWordSearch, setKeyWordSearch] = [];
+  const [keyWord, setKeyWord] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,16 +42,17 @@ function App() {
 
   const onClickGrade = (grade) => {
     setSelectedGrade(grade);
-    console.log("setSelectedGrade", grade);
   };
   const onClickVideoCategory = (cat) => {
     setSelectedCategory(cat);
-    //console.log("categoria:", cat);
   };
-  /* const HandleChange = (e) => {
-    setKeyWordSearch(e.target.value);
-    console.log(e.target.value);
-  }; */
+
+  const HandleChangeForm = (e) => {
+    const keyWordTemp = e.target.value;
+     const word = Selectors.showKeyWord(data, keyWordTemp, e);
+
+
+  };
 
   return (
     <>
@@ -62,7 +62,7 @@ function App() {
         about={Selectors.getAboutButton(data)}
         drops={Selectors.getHeaderGrades(data)}
         onClick={onClickGrade}
-        //searchKeyWords={HandleChange}
+        onChangeForm={HandleChangeForm}
       />
       <Main
         videoCategories={Selectors.getVideoCategories(data)}

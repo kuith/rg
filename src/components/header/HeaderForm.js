@@ -1,4 +1,4 @@
-function HeaderForm({ searchKeyWords }) {
+function HeaderForm({ onChangeForm }) {
   return (
     <form className="d-flex">
       <input
@@ -6,7 +6,7 @@ function HeaderForm({ searchKeyWords }) {
         type="search"
         placeholder="Search by keyword"
         aria-label="Search"
-        onChange={searchKeyWords}
+        onChange={onChangeForm}
       />
       <button className="btn btn-danger" type="submit">
         Search

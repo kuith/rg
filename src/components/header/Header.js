@@ -3,7 +3,7 @@ import HeaderButton from './HeaderButton';
 import DropGrades from './DropGrades';
 import HeaderForm from './HeaderForm';
 
-function Header({ logo, flipped, about, drops, onClick, searchKeyWords }) {
+function Header({ logo, flipped, about, drops, onClick, onChangeForm }) {
   return (
     <>
       <header>
@@ -56,7 +56,7 @@ function Header({ logo, flipped, about, drops, onClick, searchKeyWords }) {
                     <HeaderButton dataButton={about} />
                   </li>
                 </ul>
-                <HeaderForm searchKeyWords={searchKeyWords}/>
+                <HeaderForm onChangeForm={onChangeForm} />
               </div>
             </div>
           </div>
