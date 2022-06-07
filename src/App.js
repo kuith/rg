@@ -13,8 +13,8 @@ function App() {
   const [videos, setVideos] = useState();
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedGrade, setSelectedGrade] = useState("");
-  const [keyWord, setKeyWord] = useState("");
-
+  const [userkeyWord, setUserKeyWord] = useState("");
+  
   useEffect(() => {
     const fetchData = async () => {
       const initialData = await DataManager.loadData();
@@ -36,6 +36,10 @@ function App() {
     }
   }, [selectedCategory]);
 
+  useEffect(() => {
+    Selectors.showKeyWord(data, userkeyWord);
+  }, [userkeyWord]);
+
   if (data === undefined) {
     return <h3>Loading</h3>;
   }
@@ -48,9 +52,8 @@ function App() {
   };
 
   const HandleChangeForm = (e) => {
-    const keyWordTemp = e.target.value;
-     const word = Selectors.showKeyWord(data, keyWordTemp, e);
-
+    const inputValue = e.target.value;
+    setUserKeyWord(inputValue);
 
   };
 
@@ -63,6 +66,7 @@ function App() {
         drops={Selectors.getHeaderGrades(data)}
         onClick={onClickGrade}
         onChangeForm={HandleChangeForm}
+        inputValue={userkeyWord}
       />
       <Main
         videoCategories={Selectors.getVideoCategories(data)}

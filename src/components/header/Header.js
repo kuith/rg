@@ -3,7 +3,15 @@ import HeaderButton from './HeaderButton';
 import DropGrades from './DropGrades';
 import HeaderForm from './HeaderForm';
 
-function Header({ logo, flipped, about, drops, onClick, onChangeForm }) {
+function Header({
+  logo,
+  flipped,
+  about,
+  drops,
+  onClick,
+  onChangeForm,
+  inputValue,
+}) {
   return (
     <>
       <header>
@@ -56,7 +64,7 @@ function Header({ logo, flipped, about, drops, onClick, onChangeForm }) {
                     <HeaderButton dataButton={about} />
                   </li>
                 </ul>
-                <HeaderForm onChangeForm={onChangeForm} />
+                <HeaderForm onChangeForm={onChangeForm} inputValue={inputValue}/>
               </div>
             </div>
           </div>

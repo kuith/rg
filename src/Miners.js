@@ -28,22 +28,50 @@ const videosByKeyWord = (data, keyWord) => {
   return videosPorKeyWord;
 };
 
-const showKeyWord = (data, keyWord, e) => {
-  const keyWords = getKeyWords(data);
-  return keyWords.filter((valor) => {
-    const valorMinuscula = valor.toLowerCase();
-    const wordMinuscula = keyWord.toLowerCase();
-
-    if (valorMinuscula.includes(wordMinuscula)) {
-      e.target.value = wordMinuscula;
-      console.log("paso");
-      console.log(wordMinuscula);
-      return valorMinuscula.includes(wordMinuscula);
+const showKeyWord = (data, query) => {
+  if (data) {
+    let sortedKeyWords = getKeyWords(data).sort();
+    let matches = sortedKeyWords.filter((word) =>
+    {
+      const regex = new RegExp(`${query}`, "gi");
+      return word.match(regex)
     }
-    
-  });
+    )
+    console.log(matches);
+    return matches;
+
+  } else return
+  
+ 
   
 };
+
+/* const showKeyWord = (data) => {
+  let sortedKeys = getKeyWords(data).sort();
+  let input = document.getElementById("input");
+
+  input.addEventListener("keyup", (e) => {
+    for (let i of sortedKeys) {
+      if (i.toLowerCase().startsWith(input.value.toLowerCase()) && input.value !== "") {
+        //creo la lista
+        let listItem = document.createElement("li");
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pinter";
+        listItem.setAttribute("onClick", "displayNames('" + i + "')");
+        //la parte que coincide en negrita
+        let word = "<b>" + i.substr(0, input.value.length) + "<b>";
+        word += i.substr(input.value.length);
+        //enseñando el valor
+        listItem.innerHTML = word;
+        document.querySelector(".list").appendChild(listItem);
+      }
+    }
+  }
+  )}; */
+  
+/* function displayNames(input, value) {
+  input.value = value;
+  } */
 /* const showKeyWord = (data, keyWord, e) => {
     const videosTotal = getVideos(data);
     let keyWordOk = "";
