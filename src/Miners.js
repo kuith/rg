@@ -31,19 +31,13 @@ const videosByKeyWord = (data, keyWord) => {
 const showKeyWord = (data, query) => {
   if (data) {
     let sortedKeyWords = getKeyWords(data).sort();
-    let matches = sortedKeyWords.filter((word) =>
-    {
+    let matches = sortedKeyWords.filter((word) => {
       const regex = new RegExp(`${query}`, "gi");
-      return word.match(regex)
-    }
-    )
+      return word.match(regex);
+    });
     console.log(matches);
     return matches;
-
-  } else return
-  
- 
-  
+  } else return;
 };
 
 /* const showKeyWord = (data) => {
@@ -68,7 +62,7 @@ const showKeyWord = (data, query) => {
     }
   }
   )}; */
-  
+
 /* function displayNames(input, value) {
   input.value = value;
   } */

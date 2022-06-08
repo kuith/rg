@@ -13,15 +13,18 @@ function App() {
   const [videos, setVideos] = useState();
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedGrade, setSelectedGrade] = useState("");
-  const [userkeyWord, setUserKeyWord] = useState("");
-  
+  //const [keyWords, setKeyWords] = useState([]);
+
+   
   useEffect(() => {
     const fetchData = async () => {
       const initialData = await DataManager.loadData();
       setData(initialData);
     };
     fetchData();
-  }, [data]);
+  }, []);  //he quitado la referencia a data en los corchetes.
+           // Se metia en un bucle infinito al pedir las keywords.
+          // tengo problemas con lo bucles infinitos
 
   useEffect(() => {
     if (data) {
@@ -36,9 +39,11 @@ function App() {
     }
   }, [selectedCategory]);
 
-  useEffect(() => {
-    Selectors.showKeyWord(data, userkeyWord);
-  }, [userkeyWord]);
+  /* useEffect(() => {
+    if (data) {
+      setKeyWords(Selectors.getKeyWords(data));
+    }
+  }, [keyWords]) */
 
   if (data === undefined) {
     return <h3>Loading</h3>;
@@ -51,11 +56,17 @@ function App() {
     setSelectedCategory(cat);
   };
 
-  const HandleChangeForm = (e) => {
+  /* const HandleChangeForm = (e) => {
     const inputValue = e.target.value;
     setUserKeyWord(inputValue);
 
-  };
+  }; */
+
+ 
+
+  //const handleClickForm = () => {
+  //  
+  //}
 
   return (
     <>
@@ -65,8 +76,8 @@ function App() {
         about={Selectors.getAboutButton(data)}
         drops={Selectors.getHeaderGrades(data)}
         onClick={onClickGrade}
-        onChangeForm={HandleChangeForm}
-        inputValue={userkeyWord}
+        //onClickForm={handleClickForm}
+        keyWords={Selectors.getKeyWords(data)}
       />
       <Main
         videoCategories={Selectors.getVideoCategories(data)}

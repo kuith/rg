@@ -9,8 +9,8 @@ function Header({
   about,
   drops,
   onClick,
-  onChangeForm,
-  inputValue,
+  onClickForm,
+  keyWords,
 }) {
   return (
     <>
@@ -64,7 +64,7 @@ function Header({
                     <HeaderButton dataButton={about} />
                   </li>
                 </ul>
-                <HeaderForm onChangeForm={onChangeForm} inputValue={inputValue}/>
+                <HeaderForm onClickForm={onClickForm} keyWords={keyWords} />
               </div>
             </div>
           </div>
