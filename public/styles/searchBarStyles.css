@@ -1,0 +1,24 @@
+.dropdown_Search {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.dropdown_Search:empty {
+  border: none;
+}
+
+.dropdown-row_Search{
+  cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
+}
+/* 
+input_Search {
+  width: 220px;
+} */
+
+.search-inner_Search {
+  display: flex;
+}

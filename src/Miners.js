@@ -21,7 +21,7 @@ const videosByCategory = (data, cat) => {
 
 const videosByKeyWord = (data, keyWord) => {
   const videosTotal = getVideos(data);
-
+  
   const videosPorKeyWord = videosTotal.filter((video) =>
     video.keyWords.includes(keyWord)
   );

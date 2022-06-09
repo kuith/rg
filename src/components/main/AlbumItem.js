@@ -20,7 +20,7 @@ function AlbumItem({video}) {
         </svg>
         <div className="card-body">
           <p className="card-text">
-            <a href={video.url + video.video} target="blank" className="stretched-link">
+            <a href={video.urlVideo} target="blank" className="stretched-link">
               {video.videoDescription}
             </a>
           </p>

@@ -56,76 +56,72 @@
       "title": "A1 - Starters",
       "videoText": "VideoText1",
       "videoDescription": "Adjectives, Possessives, Wishes",
-      "url": "/assets/videos/",
-      "video": "video1.mp4",
+      "urlVideo": "/assets/videos/video1.mp4",
       "cfrGrade": "A1",
       "cambridgeGrade": "Starters",
       "categories": ["Adjectives", "Possessives", "Wishes"],
-      "keyWords": ["uno", "dos", "tres", "cuatro", "cinco"],
+      "keyWords": ["uno", "una", "dos", "tres", "cuatro", "cinco"],
       "id": 0
     },
     {
       "title": "A1+ - Movers",
       "videoText": "adVideoText2",
       "videoDescription": "Adjectives, Possessives, Wishes",
-      "url": "/assets/videos/",
-      "video": "video2.mp4",
+      "urlVideo": "/assets/videos/video2.mp4",
       "cfrGrade": "A1+",
       "cambridgeGrade": "Movers",
       "categories": ["Adjectives", "Possessives", "Wishes"],
       "keyWords": ["uno", "dos", "tres", "seis", "siete"],
-     "id": 1
+      "id": 1
     },
     {
       "title": "A2 - Fliers",
       "videoText": "VideoText3",
       "videoDescription": "Adjectives, Possessives, Present Perfect",
-      "url": "/assets/videos/",
-      "video": "video3.mp4",
+      "urlVideo": "/assets/videos/video3.mp4",
       "cfrGrade": "A2",
       "cambridgeGrade": "Fliers",
       "categories": ["Adjectives", "Possessives", "Present Perfect"],
       "keyWords": ["uno", "tres", "seis", "siete", "ocho"],
-     "id": 2
+      "id": 2
     },
     {
       "title": "A1 - Movers",
       "videoText": "VideoText4",
       "videoDescription": "Adjectives, Possessives, Present Perfect",
-      "url": "/assets/videos/",
-      "cfrGrade": "A1",
+      "urlVideo": "/assets/videos/video1.mp4",
       "cambridgeGrade": "Movers",
       "categories": ["Adjectives", "Possessives", "Present Perfect"],
       "keyWords": ["uno", "tres", "seis", "siete", "ocho"],
-     "id": 3
+      "id": 3
     },
     {
       "title": "A1+ - Fliers",
       "videoText": "VideoText5",
       "videoDescription": "Adjectives, Possessives, Present Perfect",
-      "url": "/assets/videos/",
+      "urlVideo": "/assets/videos/video1.mp4",
       "cfrGrade": "A1+",
       "cambridgeGrade": "Fliers",
       "categories": ["Adjectives", "Possessives", "Present Perfect"],
       "keyWords": ["siete", "ocho", "nueve", "diez", "once"],
-     "id": 4
+      "id": 4
     },
     {
       "title": "A1+ - Key",
       "videoText": "VideoText6",
       "videoDescription": "Adjectives, Gerund, Present Perfect",
-      "url": "/assets/videos/",
+      "urlVideo": "/assets/videos/video1.mp4",
       "cfrGrade": "A1+",
       "cambridgeGrade": "Key",
       "categories": ["Adjectives", "Gerund", "Present Perfect"],
       "keyWords": ["siete", "ocho", "nueve", "diez", "once"],
-     "id": 5
+      "id": 5
     },
     {
       "title": "B1 - First",
       "videoText": "aVideoText7",
       "videoDescription": "Adjectives, Gerund, Present Perfect",
-      "url": "/assets/videos/",
+      "urlVideo": "/assets/videos/video1.mp4",
       "cfrGrade": "B1",
       "cambridgeGrade": "First",
       "categories": ["Adjectives", "Gerund", "Present Perfect"],
@@ -136,29 +132,29 @@
       "title": "A1 - Fliers",
       "videoText": "VideoText 8",
       "videoDescription": "Description 8",
-      "url": "/assets/videos/",
+      "urlVideo": "/assets/videos/video1.mp4",
       "cfrGrade": "A1",
       "cambridgeGrade": "Fliers",
       "categories": [],
       "keyWords": ["dos", "tres", "cuatro", "diez", "once"],
-     "id": 7
+      "id": 7
     },
     {
       "title": "B1 - Preliminary",
       "videoText": "VideoText 9",
       "videoDescription": "Description 9",
-      "url": "/assets/videos/",
+      "urlVideo": "/assets/videos/video1.mp4",
       "cfrGrade": "B1",
       "cambridgeGrade": "Preliminary",
       "categories": [],
       "keyWords": ["nueve", "diez", "once", "doce"],
-     "id": 8
+      "id": 8
     },
     {
       "title": "B1 - Preliminary",
       "videoText": "VideoText 10",
       "videoDescription": "Description 10",
-      "url": "/assets/videos/",
+      "urlVideo": "/assets/videos/video1.mp4",
       "cfrGrade": "B1",
       "cambridgeGrade": "Preliminary",
       "categories": [],

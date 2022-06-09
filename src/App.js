@@ -13,9 +13,8 @@ function App() {
   const [videos, setVideos] = useState();
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedGrade, setSelectedGrade] = useState("");
-  //const [keyWords, setKeyWords] = useState([]);
-
-   
+  const [keyWord, setKeyWord] = useState("");
+ 
   useEffect(() => {
     const fetchData = async () => {
       const initialData = await DataManager.loadData();
@@ -39,11 +38,11 @@ function App() {
     }
   }, [selectedCategory]);
 
-  /* useEffect(() => {
+  useEffect(() => {
     if (data) {
-      setKeyWords(Selectors.getKeyWords(data));
+      setVideos(Selectors.videosByKeyWord(data, keyWord))
     }
-  }, [keyWords]) */
+  }, [keyWord])
 
   if (data === undefined) {
     return <h3>Loading</h3>;
@@ -56,18 +55,12 @@ function App() {
     setSelectedCategory(cat);
   };
 
-  /* const HandleChangeForm = (e) => {
-    const inputValue = e.target.value;
-    setUserKeyWord(inputValue);
+  const handleClickForm = (keyWord) => {
+    setKeyWord(keyWord);
+  };
 
-  }; */
-
+   
  
-
-  //const handleClickForm = () => {
-  //  
-  //}
-
   return (
     <>
       <Header
@@ -76,7 +69,7 @@ function App() {
         about={Selectors.getAboutButton(data)}
         drops={Selectors.getHeaderGrades(data)}
         onClick={onClickGrade}
-        //onClickForm={handleClickForm}
+        onClickForm={handleClickForm}
         keyWords={Selectors.getKeyWords(data)}
       />
       <Main
