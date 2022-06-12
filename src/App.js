@@ -19,12 +19,11 @@ function App() {
     const fetchData = async () => {
       const initialData = await DataManager.loadData();
       setData(initialData);
+      setSelectedCategory("All videos");
     };
     fetchData();
-  }, []);  //he quitado la referencia a data en los corchetes.
-           // Se metia en un bucle infinito al pedir las keywords.
-          // tengo problemas con lo bucles infinitos
-
+  }, []); 
+  
   useEffect(() => {
     if (data) {
       const selectedVideos = Selectors.videosByGrade(data, selectedGrade);
@@ -53,19 +52,17 @@ function App() {
   };
   const onClickVideoCategory = (cat) => {
     setSelectedCategory(cat);
+    console.log(cat);
   };
 
   const handleClickForm = (keyWord) => {
     setKeyWord(keyWord);
   };
 
-   
- 
   return (
     <>
       <Header
         logo={Selectors.getChanelLogo(data)}
-        flipped={Selectors.getFlippedButton(data)}
         about={Selectors.getAboutButton(data)}
         drops={Selectors.getHeaderGrades(data)}
         onClick={onClickGrade}

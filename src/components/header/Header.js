@@ -5,7 +5,6 @@ import HeaderForm from './HeaderForm';
 
 function Header({
   logo,
-  flipped,
   about,
   drops,
   onClick,
@@ -16,7 +15,7 @@ function Header({
     <>
       <header>
         <nav className="navbar navbar-expand-xl navbar-light bg-white">
-          <div className="container">
+          <div className="container-new">
             <ChanelLogo logo={logo} />
             <button
               className="navbar-toggler"
@@ -53,18 +52,21 @@ function Header({
                 ></button>
               </div>
               <div className="offcanvas-body">
-                <ul className="navbar-nav justify-content-end me-4 flex-grow-1">
-                  <DropGrades drop={drops.cfr} onClick={onClick} />
-                  <DropGrades drop={drops.cambridge} onClick={onClick} />
-
-                  <li className="nav-item">
-                    <HeaderButton dataButton={flipped} />
-                  </li>
-                  <li className="nav-item">
+                <ul className="navbar-nav justify-content-end flex-grow-1">
+                  <li className="nav-item nav-item-about">
                     <HeaderButton dataButton={about} />
                   </li>
+                  <DropGrades drop={drops.cfr} onClick={onClick} />
+                  <DropGrades drop={drops.cambridge} onClick={onClick} />
+                  <li className="nav-item nav-item-search form-search">
+                    <HeaderForm onClickForm={onClickForm} keyWords={keyWords} />
+                  </li>
+                  <li className="nav-item nav-item-flearn">
+                    <a className="nav-link flearn" href="#">
+                      FLIPPED LEARNING
+                    </a>
+                  </li>
                 </ul>
-                <HeaderForm onClickForm={onClickForm} keyWords={keyWords} />
               </div>
             </div>
           </div>

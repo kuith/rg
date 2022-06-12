@@ -9,28 +9,28 @@ function Footer({ data }) {
             className="d-block px-2"
             lang="es"
           >
-            {data.contacto}
+            Contacto
           </a>
         </li>
         <li>
           <a
-            href="/condicionesdeuso"
+            href={data.condiciones}
             className="d-block px-2"
             lang="es"
             target="_blank"
           >
-            {data.condicionesdeuso}{" "}
+            Condiciones de uso
             <span className="visually-hidden">(abre una nueva pestaña)</span>
           </a>
         </li>
         <li>
           <a
-            href="/politicadeprivacidad"
+            href={data.urlPrivacidad}
             className="d-block px-2"
             lang="es"
             target="_blank"
           >
-            {data.politicadeprivacidad}{" "}
+            Política de privacidad
             <span className="visually-hidden">(abre una nueva pestaña)</span>
           </a>
         </li>

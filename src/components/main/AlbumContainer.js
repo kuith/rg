@@ -8,7 +8,7 @@ function AlbumContainer({ listVideos }) {
   return (
     <div className="album py-5 bg-light">
       <div className="container">
-        <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 g-3">
+        <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3">
           {videosAlbum}
         </div>
       </div>

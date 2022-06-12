@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+  <meta name="generator" content="Hugo 0.88.1" />
+  <title>Richmond Grammar Channel</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 4rem;
+    }
+
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+      bottom: 8rem;
+      z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+      height: 32rem;
+    }
+
+    .carousel-item>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 32rem;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .stretched-link {
+      font-weight: 600;
+      text-decoration: none;
+      color: black;
+    }
+
+    .card-text {
+      text-align: center;
+    }
+
+    .footer-links li {
+      list-style-type: none;
+      display: inline-block;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: black;
+    }
+
+    .container-new {
+      width: 80%;
+      padding-right: var(--bs-gutter-x, 0.75rem);
+      padding-left: var(--bs-gutter-x, 0.75rem);
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .navbar .container-new {
+      display: flex;
+      flex-wrap: inherit;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .form-search {
+      width: 40%;
+    }
+
+    @media (max-width: 1300px) {
+      .form-search {
+        width: 100%;
+      }
+
+      .nav-item {
+        margin: 0.5em 0;
+      }
+    }
+
+    @media (min-width: 1300px) {
+      .nav-item-about {
+        padding: 0 2em !important;
+      }
+
+      .nav-item-cambridge {
+        padding-right: 2em !important;
+      }
+
+      .nav-item-flearn {
+        padding-left: 2em !important;
+      }
+    }
+
+    /* @media (max-width 1450px) {
+      a {
+        font-size: .8em !important;
+      }
+    } */
+
+    .flearn {
+      white-space: nowrap;
+    }
+  </style>
+  <!-- <link href="offcanvas.css" rel="stylesheet"> -->
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-light bg-white">
+      <div class="container-new">
+        <a class="navbar-brand" href="#"><img src="grammar-channel-logo.png" alt="Richmond Grammar Channel" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel" aria-hidden="true" style="visibility: hidden">
+          <div class="offcanvas-header">
+            <h2 id="offcanvasNavbarLabel" class="offcanvas-title visually-hidden">
+              Primary navigation menu
+            </h2>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1">
+              <li class="nav-item nav-item-about">
+                <button type="button" class="btn btn-outline-danger btn-lg px-3 py-1">
+                  ABOUT
+                </button>
+              </li>
+              <li class="nav-item nav-item-cefr dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                  aria-expanded="false">CEFR</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                  <li><a class="dropdown-item" href="#">A1</a></li>
+                  <li><a class="dropdown-item" href="#">A1+</a></li>
+                  <li><a class="dropdown-item" href="#">A2</a></li>
+                  <li><a class="dropdown-item" href="#">A2+</a></li>
+                  <li><a class="dropdown-item" href="#">B1</a></li>
+                  <li><a class="dropdown-item" href="#">B1+</a></li>
+                  <li><a class="dropdown-item" href="#">B2</a></li>
+                  <li><a class="dropdown-item" href="#">B2+</a></li>
+                </ul>
+              </li>
+              <li class="nav-item nav-item-cambridge dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                  aria-expanded="false">CAMBRIDGE</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                  <li><a class="dropdown-item" href="#">Starters</a></li>
+                  <li><a class="dropdown-item" href="#">Movers</a></li>
+                  <li><a class="dropdown-item" href="#">Fliers</a></li>
+                  <li><a class="dropdown-item" href="#">Key</a></li>
+                  <li><a class="dropdown-item" href="#">Preliminary</a></li>
+                  <li><a class="dropdown-item" href="#">First</a></li>
+                </ul>
+              </li>
+              <li class="nav-item nav-item-search form-search">
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search by keyword" aria-label="Search" />
+                  <button class="btn btn-danger" type="submit">Search</button>
+                </form>
+              </li>
+              <li class="nav-item nav-item-flearn">
+                <a class="nav-link flearn" href="#">FLIPPED LEARNING</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+          <div class="container">
+            <!-- <div class="carousel-caption text-start"> -->
+            <div class="carousel-caption">
+              <h1>Some content title 1</h1>
+              <p>
+                Some representative content for the second slide of the
+                carousel.
+              </p>
+              <p><a class="btn btn-lg btn-danger" href="#">Watch now</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Some content title 1</h1>
+              <p>
+                Some representative content for the second slide of the
+                carousel.
+              </p>
+              <p><a class="btn btn-lg btn-danger" href="#">Watch now</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Some content title 1</h1>
+              <p>
+                Some representative content for the second slide of the
+                carousel.
+              </p>
+              <p><a class="btn btn-lg btn-danger" href="#">Watch now</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="tagcloud mb-5">
+      <div class="container text-center">
+        <h2 class="h4 mb-4">Filter by category:</h2>
+        <button type="button" class="btn rounded-pill btn-danger mb-2">
+          All videos
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Adjectives
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Adverbs
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Clauses
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Conditionals
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Future
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Gerund
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Imperatives
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Intensifiers
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Modals
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Nouns
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Passive
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Passives
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Past Continuous
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Past Perfect
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Past Simple
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Possessives
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Prepositions
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Present Continuous
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Present Perfect
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Present Simple
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Pronouns
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Quantifiers
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Tag questions
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Verb patterns
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Vocab/Spelling
+        </button>
+        <button type="button" class="btn rounded-pill btn-outline-danger mb-2">
+          Wishes
+        </button>
+      </div>
+    </div>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link" data-bs-toggle="tooltip" title="Comparative Adjectives">Comparative Adjectives</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link">Possesive Adjectives</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link">Superlative Adjectives</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a class="stretched-link" href="">Relative Adjectives</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link">Relative clauses: Non-defining</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link"><em>-ing</em> verbs</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+     
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link">Demonstrative pronouns</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link">Plural nouns</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link"><em>-ing</em> verbs</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a class="stretched-link" href="">Past simple</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link">Present Simple <em>to be</em></a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link">Demonstrative pronouns</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link">Plural nouns</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="" class="stretched-link"><em>-ing</em> verbs</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" src="assets/img/0224.png" alt="Comparative Adjectives"
+                width="100%" height="auto" src="\">
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a class="stretched-link" href="">Past simple</a>
+                </p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="py-5">
+    <p class="text-center mb-0">© Sanoma Educación S.L.U / Richmond</p>
+    <ul class="footer-links text-center p-0">
+      <li>
+        <a href="mailto:richmond@richmondelt.es?body=Método: HIGH ACHIEVERS ASSESSMENT EDITION (Esta información es importante, por favor no la borre). Escriba su consulta a partir de aquí."
+          class="d-block px-2" lang="es">Contacto</a>
+      </li>
+      <li>
+        <a href="/condicionesdeuso" class="d-block px-2" lang="es" target="_blank">Condiciones de uso
+          <span class="visually-hidden">(abre una nueva pestaña)</span></a>
+      </li>
+      <li>
+        <a href="/politicadeprivacidad" class="d-block px-2" lang="es" target="_blank">Política de privacidad
+          <span class="visually-hidden">(abre una nueva pestaña)</span></a>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="offcanvas.js"></script> -->
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 const videosByGrade = (data, grade) => {
   const videosTotal = getVideos(data);
   const videosResult = videosTotal.filter(
-    (video) => video.cfrGrade === grade || video.cambridgeGrade === grade
+    (video) => video.cefrGrade === grade || video.cambridgeGrade === grade
   );
   return videosResult;
 };
@@ -39,47 +39,6 @@ const showKeyWord = (data, query) => {
     return matches;
   } else return;
 };
-
-/* const showKeyWord = (data) => {
-  let sortedKeys = getKeyWords(data).sort();
-  let input = document.getElementById("input");
-
-  input.addEventListener("keyup", (e) => {
-    for (let i of sortedKeys) {
-      if (i.toLowerCase().startsWith(input.value.toLowerCase()) && input.value !== "") {
-        //creo la lista
-        let listItem = document.createElement("li");
-        listItem.classList.add("list-items");
-        listItem.style.cursor = "pinter";
-        listItem.setAttribute("onClick", "displayNames('" + i + "')");
-        //la parte que coincide en negrita
-        let word = "<b>" + i.substr(0, input.value.length) + "<b>";
-        word += i.substr(input.value.length);
-        //enseñando el valor
-        listItem.innerHTML = word;
-        document.querySelector(".list").appendChild(listItem);
-      }
-    }
-  }
-  )}; */
-
-/* function displayNames(input, value) {
-  input.value = value;
-  } */
-/* const showKeyWord = (data, keyWord, e) => {
-    const videosTotal = getVideos(data);
-    let keyWordOk = "";
-    const keyWordResult = videosTotal.filter((video) =>
-      video.keyWords.find((word) => word === keyWord)
-    );
-
-    if (keyWordResult.length !== 0) {
-      keyWordOk = keyWord;
-    }
-    console.log(keyWordOk);
-    //e.target.value = "lo encontre";
-    return keyWordOk;
-  }; */
 
 const getDataFooter = (data) => data.footer;
 const getVideoCategories = (data) => data.videoCategories;

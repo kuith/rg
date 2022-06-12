@@ -1,8 +1,8 @@
 function HeaderButton({ dataButton }) {
   return (
-    <a className="nav-link" href={dataButton.url}>
+    <button type="button" className="btn btn-outline-danger btn-lg px-3 py-1">
       {dataButton.text}
-    </a>
+    </button>
   );
 }
 

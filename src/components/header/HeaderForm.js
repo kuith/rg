@@ -1,18 +1,57 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+
 
 function HeaderForm({ onClickForm, keyWords }) {
+  const [userValue, setUserValue] = useState("");
+  const [suggestionPart, setSuggestionPart] = useState("");
 
-  const [value, setValue] = useState('');
-  const [open, setOpen] = useState(false);
+  const inputRef = useRef();
+  const userValueRef = useRef();
+  const keyWordToSearch = userValue + suggestionPart;
+  userValueRef.current = userValue;
 
-  const onChange = (e) => {
-    setValue(e.target.value)
+  function findSuggestionFor(phrase) {
+    const found = keyWords.find((word) => word.indexOf(phrase) === 0);
+    return found
   }
 
-  const onSearch = (searchItem) => {
-    setValue(searchItem)
-    setOpen(false);
+  function handlerUserInputChange(e) {
+    const inputValue = e.target.value;
+    const newUserValue = inputValue;
+    
+    const diff = newUserValue.substr(userValue.length);
+    if (suggestionPart.indexOf(diff) === 0) {
+      setSuggestionPart(suggestionPart.substr(diff.length));
+    } else {
+      setSuggestionPart("");
+    }
+
+    setUserValue(newUserValue);
   }
+
+  useEffect(() => {
+    
+    if (userValue.length > 0) {
+      const suggestWord = findSuggestionFor(userValue);
+      if (suggestWord) {
+        const stillFits = suggestWord.indexOf(userValueRef.current) === 0;
+        if (stillFits) {
+          setSuggestionPart(suggestWord.substr(userValueRef.current.length));
+
+        } else {
+          setSuggestionPart("");
+        }
+      } 
+    } else {
+      setSuggestionPart("")
+    }
+  }, [userValue]);
+
+  useEffect(() => {
+    inputRef.current.selectionStart = userValueRef.current.length;
+    inputRef.current.selectionEnd =
+      userValueRef.current.length + suggestionPart.length;
+  }, [suggestionPart]);
 
   return (
     <form className="d-flex">
@@ -22,27 +61,15 @@ function HeaderForm({ onClickForm, keyWords }) {
         placeholder="Search by keyword"
         aria-label="Search"
         id="input"
-        value={value}
-        onChange={onChange}
+        ref={inputRef}
+        onChange={(e) => handlerUserInputChange(e)}
+        value={userValue + suggestionPart}
       />
-      <ul className="dropdown_Search">
-        {keyWords
-          .filter((item) => {
-            const searchItem = value.toLocaleLowerCase();
-            const keyWord = item.toLocaleLowerCase();
-            return (
-              searchItem &&
-              keyWord.startsWith(searchItem) &&
-              keyWord !== searchItem
-            );
-          })
-          .map((item) => (
-            <div key={item} className="dropdown-row_Search" onClick={() => onSearch(item)}>
-              {item}
-            </div>
-          ))}
-      </ul>
-      <button className="btn btn-danger" type="submit" onClick={() => onClickForm(value)}>
+      <button
+        className="btn btn-danger"
+        type="submit"
+        onClick={() => onClickForm(keyWordToSearch)}
+      >
         Search
       </button>
     </form>

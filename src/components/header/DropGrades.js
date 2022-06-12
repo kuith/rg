@@ -5,9 +5,11 @@ function DropGrades({ drop, onClick }) {
   const liGrades = drop.grades.map((item) => (
     <LiGrade data={item} key={item.grade} onClick={onClick}/>
   ));
+
+  const css = drop.cssClass;
   
   return (
-    <li className="nav-item dropdown">
+    <li className={`nav-item ${css} dropdown`}>
       <a
         className="nav-link dropdown-toggle"
         href={drop.url}
