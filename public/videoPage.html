@@ -54,7 +54,7 @@
         </div>
         <div class="container py-3">
             <h3 class="titulo text-center mt-1 mb-4" id="videoTitulo"><span class="fst-italic">to be</span></h3>
-            <video width="100%" height="auto" controls preload="auto">
+            <video width="100%" height="auto" controls preload="auto" id="video">
                 <source id="videoUrl" src="" type="video/mp4">
             </video>
         </div>
@@ -83,8 +83,8 @@
         document.getElementById('cambridgeGrade').innerHTML = cambridgeGrade;
         document.getElementById('videoCategory').innerHTML = videoCategory;
         document.getElementById('videoTitulo').innerHTML = videoTitulo;
-        document.getElementById('videoUrl').setAttribute('src', videoUrl);
-
+        document.getElementById('videoUrl').src= videoUrl;
+        document.getElementById('video').load();
     </script>
 </body>
 
