@@ -48,7 +48,7 @@
     "nueve",
     "diez",
     "once",
-    "doce", 
+    "doce",
     "quince",
     "catorce"
   ],
@@ -238,74 +238,57 @@
   "headerGrades": {
     "cfr": {
       "title": "CEFR",
-      "url": "#",
-      "cssClass":"nav-item-cefr",
+      "cssClass": "nav-item-cefr",
       "grades": [
         {
-          "grade": "A1",
-          "url": "#"
+          "grade": "A1"
         },
         {
-          "grade": "A1+",
-          "url": "#"
+          "grade": "A1+"
         },
         {
-          "grade": "A2",
-          "url": "#"
+          "grade": "A2"
         },
         {
-          "grade": "A2+",
-          "url": "#"
+          "grade": "A2+"
         },
         {
-          "grade": "B1",
-          "url": "#"
+          "grade": "B1"
         },
         {
-          "grade": "B1+",
-          "url": "#"
+          "grade": "B1+"
         },
         {
-          "grade": "B2",
-          "url": "#"
+          "grade": "B2"
         },
         {
-          "grade": "B2+",
-          "url": "#"
+          "grade": "B2+"
         }
       ]
     },
     "cambridge": {
       "title": "CAMBRIDGE",
-      "url": "#",
       "cssClass": "nav-item-cambridge",
       "grades": [
         {
-          "grade": "Starters",
-          "url": "#"
+          "grade": "Starters"
         },
         {
-          "grade": "Movers",
-          "url": "#"
+          "grade": "Movers"
         },
         {
-          "grade": "Fliers",
-          "url": "#"
+          "grade": "Fliers"
         },
         {
-          "grade": "Key",
-          "url": "#"
+          "grade": "Key"
         },
         {
-          "grade": "Preliminary",
-          "url": "#"
+          "grade": "Preliminary"
         },
         {
-          "grade": "First",
-          "url": "#"
+          "grade": "First"
         }
       ]
     }
   }
 }
-

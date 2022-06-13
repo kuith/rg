@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     if (data) {
-      setVideos(Selectors.videosByCategory(data, selectedCategory));
+      setVideos(Selectors.videosByCategory(data, selectedCategory, videos));
     }
   }, [selectedCategory]);
 
@@ -52,7 +52,6 @@ function App() {
   };
   const onClickVideoCategory = (cat) => {
     setSelectedCategory(cat);
-    console.log(cat);
   };
 
   const handleClickForm = (keyWord) => {

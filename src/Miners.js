@@ -6,16 +6,14 @@ const videosByGrade = (data, grade) => {
   return videosResult;
 };
 
-const videosByCategory = (data, cat) => {
+const videosByCategory = (data, cat, videos) => {
   const videosTotal = getVideos(data);
 
   if (cat === "All videos") {
     return videosTotal;
   }
 
-  const videosPorCat = videosTotal.filter((video) =>
-    video.categories.includes(cat)
-  );
+  const videosPorCat = videos.filter((video) => video.categories.includes(cat));
   return videosPorCat;
 };
 
