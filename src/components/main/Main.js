@@ -8,7 +8,6 @@ function Main({
   onClick,
   category
 }) {
-  console.log("del main" , category)
   return (
     <main>
       <Carousel />

@@ -14,6 +14,8 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedGrade, setSelectedGrade] = useState("");
   const [keyWord, setKeyWord] = useState("");
+  const [videosByGrade, setVideosByGrade] = useState();
+
  
   useEffect(() => {
     const fetchData = async () => {
@@ -27,13 +29,31 @@ function App() {
   useEffect(() => {
     if (data) {
       const selectedVideos = Selectors.videosByGrade(data, selectedGrade);
+      setVideosByGrade(selectedVideos);
       setVideos(selectedVideos);
+      setSelectedCategory("All videos");
     }
   }, [selectedGrade]);
 
   useEffect(() => {
     if (data) {
-      setVideos(Selectors.videosByCategory(data, selectedCategory, videos));
+      const videosInicial = Selectors.getVideos(data);
+      if (selectedCategory === "All videos" && videosByGrade===undefined && selectedGrade==="") {
+        setVideosByGrade(undefined);
+        setSelectedGrade("");
+        setVideos(Selectors.getVideos(data));
+      }
+        if (videosByGrade !== undefined) {
+          setVideos(
+            Selectors.videosByCategory(data, selectedCategory, videosByGrade)
+          );
+        } else {
+          
+          setVideos(
+            Selectors.videosByCategory(data, selectedCategory, videosInicial)
+          );
+        }
+      
     }
   }, [selectedCategory]);
 
@@ -58,8 +78,10 @@ function App() {
     setKeyWord(keyWord);
   };
 
-  console.log("del app", selectedCategory)
-
+  console.log("VideosByGrade: ", videosByGrade);
+  console.log("Videos: ", videos);
+  console.log("Categoría: ", selectedCategory);
+  console.log("Grade:", selectedGrade);
   return (
     <>
       <Header

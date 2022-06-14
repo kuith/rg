@@ -6,7 +6,6 @@ function AlbumItem({ video, category }) {
     videoTitulo: video.videoDescription,
     videoUrl: video.urlVideo,
   };
-    console.log("del albumItem", videoPageData.videoCategory)
   const goTovideoPage = () => {
     window.open(
       `videoPage.html?cefrGrade=${videoPageData.cefrGrade}&cambridgeGrade=${videoPageData.cambridgeGrade}&videoCategory=${videoPageData.videoCategory}&videoTitulo=${videoPageData.videoTitulo}&videoUrl=${videoPageData.videoUrl}`
@@ -23,15 +22,11 @@ function AlbumItem({ video, category }) {
               alt={video.alt}
               width="100%"
               height="auto"
-              // href={video.urlVideo}
-              // href="%PUBLIC_URL%/videoPage.html"
               onClick={goTovideoPage}
             />
             <div className="card-body">
               <p className="card-text">
                 <a
-                  href="#"
-                  //href="process.env.PUBLIC_URL/videoPage.html"
                   onClick={goTovideoPage}
                   className="stretched-link"
                   data-bs-toggle="tooltip"
