@@ -1,15 +1,15 @@
-function AlbumItem({ video }) {
+function AlbumItem({ video, category }) {
   const videoPageData = {
     cefrGrade: video.cefrGrade,
     cambridgeGrade: video.cambridgeGrade,
-    videoCategory: "",
+    videoCategory: category,
     videoTitulo: video.videoDescription,
     videoUrl: video.urlVideo,
   };
-
+    console.log("del albumItem", videoPageData.videoCategory)
   const goTovideoPage = () => {
     window.open(
-      `videoPage.html?cefrGrade=${videoPageData.cefrGrade}&cambridgeGrade=${videoPageData.cambridgeGrade}&videoCategory=${videoPageData}&videoTitulo=${videoPageData.videoTitulo}&videoUrl=${videoPageData.videoUrl}`
+      `videoPage.html?cefrGrade=${videoPageData.cefrGrade}&cambridgeGrade=${videoPageData.cambridgeGrade}&videoCategory=${videoPageData.videoCategory}&videoTitulo=${videoPageData.videoTitulo}&videoUrl=${videoPageData.videoUrl}`
     );
   };
   return (

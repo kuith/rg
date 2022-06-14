@@ -58,6 +58,8 @@ function App() {
     setKeyWord(keyWord);
   };
 
+  console.log("del app", selectedCategory)
+
   return (
     <>
       <Header
@@ -72,6 +74,7 @@ function App() {
         videoCategories={Selectors.getVideoCategories(data)}
         videosAlbum={videos || []}
         onClick={onClickVideoCategory}
+        category = { selectedCategory }
       />
       <Footer data={Selectors.getDataFooter(data)} />
     </>
